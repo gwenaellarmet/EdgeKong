@@ -33,7 +33,8 @@ while True:
 	p9  = Asset.Platform(game, 475,150,475,450)
 	p10 = Asset.Platform(game, 10 ,10 ,475,10 )
 
-	world=[p1,p2,p3,p4,p5,p6,p7,p8,p9,p10]
+	world  = [p1,p2,p3,p4,p5,p6,p7,p8,p9,p10]
+	world2 = [p1,p2,p3,p4,p5,p6]
 	barrels = []
 	win  = False
 	lost = False
@@ -71,7 +72,7 @@ while True:
 			player.draw()
 			princess.draw()
 
-			for p in world:
+			for p in world2:
 				p.draw()
 
 			for c in barrels:
@@ -99,7 +100,7 @@ while True:
 					animation.anim()
 					time.sleep(0.05)
 					game.refresh()
-					
+
 				Asset.Coeur(game).draw()
 				animation.draw()
 				game.refresh()
